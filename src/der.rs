@@ -485,12 +485,14 @@ pub fn der_read_element_content_as<'a,'b>(i:&'a[u8], tag:u8, len:usize) -> IResu
                     )
                 },
         // 0x02: integer
+        /*
         0x02 => {
                     map!(i,
                         parse_hex_to_u64!(len),
                         |i| { DerObjectContent::Integer(i) }
                     )
                 },
+        */
         // 0x03: bitstring
         0x03 => {
                     do_parse!(i,
